@@ -1,0 +1,154 @@
+/*Mobile*/
+@media (max-width: 425px) {
+
+    /*Menu*/
+
+    .menu__container{
+        flex-direction: column;
+        align-content: center;
+    }
+    .menu__list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    
+     /*body*/
+     body{
+        width:425px;
+        margin: auto;
+     }
+
+    /*Titulo*/
+
+    .title__div{
+        flex-direction: column;
+    }
+
+    .title__profile{
+        width: 35%;
+    }
+    
+    .title__bio,.academic__title,.experience__section__title{
+        font-size: 1.5em;
+    }
+
+    .title__subsection,.experience__title{
+        font-size: 1em;
+    }
+
+    .title__network__item{font-size: .8em;}
+    /*Sección sobre mi*/
+
+    .about__paragraph{
+        width: 100%;
+    }
+    
+    /*Skills*/
+
+    .skills__line{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .skills__box{
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    
+    /*Hobbies*/
+    .hobbies__line{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .hobbies__box{
+      width: 40px;
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+
+
+    /*Formación Académica*/
+    .academic__courses{
+        flex-direction: column;
+    }
+
+    .academic__courses__item__title{
+        margin-bottom: .5rem;
+    }
+
+    .academic__courses__item__subtitle{
+        margin-bottom: .5rem;
+    }
+
+    .academic__courses__item__img{
+      display: flex;
+      justify-content: center;
+      padding: 2.5rem;
+      }
+
+    .academic__courses__item__img img{
+        width: 50%;
+        height: 50%;
+      }
+  
+
+    /*Experiencia Profesional*/
+    .experiencie__container{
+        flex-direction: column;
+    }
+
+    .experiencie__box, .experiencie__box--invert{
+        flex-direction: column;
+    } 
+   
+
+    .experience__img{
+        width: 90%;
+        height: 90%;
+    }
+
+     .experience__text{
+        font-size: .8em;
+     }
+
+     .experiencia__botao--repo,.experience__botao--demo,.formcontato__botao{
+        width: 45%;
+        height: 45%;
+     }
+
+     /*Contacto*/
+
+     .formcontato__contacto{
+        flex-direction: column;
+     }
+
+     .formcontato__img{
+        display: none;
+     }
+
+     .formcontato__botao{
+        width: 65%;
+        padding: 1rem 1.5rem;
+        font-size: 1em;
+     }
+
+     
+    
+    /*Footer*/
+    
+    
+
+
+
+
+}
