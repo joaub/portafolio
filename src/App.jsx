@@ -1,8 +1,8 @@
 
 import './App.css'
 import PrimerComponente from './PrimerComponente'
-import SegundoComponente from './componentes/SegundoComponente'
-import Proyecto from './componentes/Proyecto'
+import Skills from "./Skills"
+import Proyecto from "./Proyecto"
 
 function App(){ 
 
@@ -10,8 +10,9 @@ function App(){
     <>
        
         <PrimerComponente/>
-        <SegundoComponente/>     
+        <Skills/>
         <Proyecto/>
+       
     </>
   )
 }

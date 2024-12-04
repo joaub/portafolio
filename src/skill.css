@@ -1,0 +1,164 @@
+.skills{
+    display: inline-block;
+}
+.skills:hover{   
+    outline: 3px yellow solid;
+    
+}
+.subtitulo{
+    font-size: 1.4rem;
+}
+.progress-circle {
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #ebebeb; 
+}
+
+
+  .progress-circle:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-animation: colorload 2s;
+    animation: colorload 2s; }
+  
+  .progress-circle span {
+    font-size: 1rem;
+    color: #8b8b8b;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin-left: -45px;
+    margin-top: -45px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1; }
+  
+  .progress-circle span:after {
+    content: "%";
+    font-weight: 600;
+    color: #8b8b8b; }
+  
+  .progress-circle.progress-90:after {
+    background-image: linear-gradient(54deg, #66b8ff 50%, transparent 50%, transparent), linear-gradient(270deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  
+  .progress-circle.progress-85:after {
+    background-image: linear-gradient(36deg, #66b8ff 50%, transparent 50%, transparent), linear-gradient(270deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  .progress-circle.progress-50:after {
+    background-image: linear-gradient(-90deg, #66b8ff 50%, transparent 50%, transparent), linear-gradient(270deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  
+  
+  .progress-circle.progress-45:after {
+    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(252deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  
+  .progress-circle.progress-40:after {
+    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(234deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  
+  .progress-circle.progress-60:after {
+    background-image: linear-gradient(-54deg, #66b8ff 50%, transparent 50%, transparent), linear-gradient(270deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+
+  .progress-circle.progress-25:after {
+    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(180deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+  
+  .progress-circle.progress-30:after {
+    background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, #66b8ff 50%, #ebebeb 50%, #ebebeb); }
+    
+ 
+ 
+
+  /* proyectos*/
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .card_item{
+    display: flex;
+  padding: 1rem;
+  
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+     width: 33.3333%;
+   }
+  }
+  .card {
+    background-color: #639797;
+    -webkit-box-shadow: 20px 30px 40px -11px rgba(112, 139, 146, 0.62);
+    -moz-box-shadow: 20px 30px 40px -11px rgba(107, 156, 165, 0.62);
+    box-shadow: 20px 30px 40px -11px rgba(102, 140, 151, 0.62);
+    border-radius: 0.5rem;
+    margin: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  .card_content {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0.5rem;
+  }
+  
+  .imagen{
+    width: 360px;
+    height: 320px;
+    padding: 1rem;
+  }
+  /*
+  .boton{
+    margin: 0.25rem;
+  }
+  .boton:hover{
+    outline: solid 1px;
+    font-size: 20px;
+    background: #298f42;
+  }
+*/
+  .boton{
+    border:0;
+    background-image: linear-gradient(
+        150deg,
+        #9500,
+        #09F,
+        #00DDFF
+    );
+    border-radius: 8px;
+color:#fff;
+display: flex;
+font-size: 12px;
+padding: 4px;
+cursor: pointer;
+transition: .3s;
+}
+
+.boton span{
+    background-color: #111;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: .3s;
+}
+.boton:hover span {
+    background: none;
+}

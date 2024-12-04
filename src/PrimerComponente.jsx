@@ -1,6 +1,6 @@
-import '../App.css'
+import './App.css'
 import Typewriter from 'typewriter-effect';
-import persona from '../assets/persona.jpg' 
+import persona from './assets/persona.jpg' 
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 
