@@ -78,54 +78,48 @@
  
 
   /* proyectos*/
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  .card_item{
-    display: flex;
-  padding: 1rem;
-  
-    @media(min-width: 40rem) {
-      width: 50%;
-    }
-    @media(min-width: 56rem) {
-     width: 33.3333%;
-   }
-  }
-  .card {
-    background-color: #639797;
-    -webkit-box-shadow: 20px 30px 40px -11px rgba(112, 139, 146, 0.62);
-    -moz-box-shadow: 20px 30px 40px -11px rgba(107, 156, 165, 0.62);
-    box-shadow: 20px 30px 40px -11px rgba(102, 140, 151, 0.62);
-    border-radius: 0.5rem;
-    margin: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    
-    
-  }
-  .card_content {
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    align-items: center;
-    
-    margin: 0.5rem;
+  .projects {
+    margin-top: 20px;
+   
   }
   
-  .imagen{
-    width: 360px;
-    height: 320px;
-    padding: 1rem;
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
   /*
   .boton{
     margin: 0.25rem;
@@ -145,13 +139,13 @@
         #00DDFF
     );
     border-radius: 8px;
-color:#fff;
-display: flex;
-font-size: 12px;
-padding: 4px;
-cursor: pointer;
-transition: .3s;
-}
+    color:#fff;
+    display: flex;
+    font-size: 12px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+  }
 
 .boton span{
     background-color: #111;

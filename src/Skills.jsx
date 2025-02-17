@@ -3,7 +3,7 @@ import "./skill.css"
 function Skills() {
   return (
     <>
-     <article> 
+     <article > 
         <h1 className='titulo' id='skills'>Skills</h1>  
 
         <section className="progress-circle-container ">
