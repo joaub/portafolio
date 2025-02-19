@@ -119,40 +119,8 @@
     text-decoration: none;
     border-radius: 5px;
   }
+  .project-button:hover{
+    font-size: 1.3rem;
+  }
   
-  /*
-  .boton{
-    margin: 0.25rem;
-  }
-  .boton:hover{
-    outline: solid 1px;
-    font-size: 20px;
-    background: #298f42;
-  }
-*/
-  .boton{
-    border:0;
-    background-image: linear-gradient(
-        150deg,
-        #9500,
-        #09F,
-        #00DDFF
-    );
-    border-radius: 8px;
-    color:#fff;
-    display: flex;
-    font-size: 12px;
-    padding: 4px;
-    cursor: pointer;
-    transition: .3s;
-  }
-
-.boton span{
-    background-color: #111;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: .3s;
-}
-.boton:hover span {
-    background: none;
-}
+ 
