@@ -8,7 +8,7 @@ const projects = [
     { name: "Juego del Ahorcado", link: "https://joaub.github.io/ahorcado-juego/", description: "Juego interactivo con JavaScript.", image: juegoDelAhorcado },
     { name: "Timerjs", link: "https://joaub.github.io/timerJS/", description: "temporizador de js", image: timerJs },
     {name:"Piano", link:"https://joaub.github.io/pianoJs/",description:"piano hecho con js",image:piano2},
-    {name:pokeApi, link:"https://joaub.github.io/pokeapi/", description:"pokedex con react",image:pokeApi},
+    {name:"pokeApi", link:"https://joaub.github.io/pokeapi/", description:"pokedex con react",image:pokeApi},
   ];
 
 function Proyecto() {
