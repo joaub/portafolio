@@ -24,7 +24,7 @@ function Skills() {
             <div className="progress-circle progress-60"><span>60</span></div>  
           </div>
         </section>  
-        <section>
+        <section className="progress-circle-container ">
           <div className="skills">
             <p className="subtitulo">MySql</p>
             <div className="progress-circle progress-45"><span>45</span></div>  

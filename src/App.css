@@ -84,3 +84,66 @@ body {
   background-color: #3320dd;
   outline: #f0faff 1px solid;
 }
+
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .titulo {
+    font-size: 2rem;
+  }
+
+  .persona {
+    width: 80%; /* que ocupe más en móviles */
+  }
+
+  .nombre {
+    font-size: 1rem;
+  }
+
+  .parrafo {
+    font-size: 0.7rem;
+  }
+
+  .correo {
+    font-size: 1rem;
+  }
+
+  .icono {
+    font-size: 2rem;
+    padding: 0.3rem;
+  }
+
+  .icono:hover {
+    font-size: 3rem;
+    outline: none;
+  }
+
+  .inicio {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .nav {
+    font-size: 15px;
+    padding: 0.5rem;
+    margin: 0.3rem;
+  }
+
+  .nav:hover {
+    font-size: 17px;
+    outline: none;
+    background-color: transparent;
+  }
+
+  body {
+    flex-direction: column; /* si tenés varios elementos en línea */
+    padding: 1rem;
+  }
+}

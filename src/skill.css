@@ -123,4 +123,71 @@
     font-size: 1.3rem;
   }
   
+  @media (max-width: 768px) {
+  .titulo{
+    font-size: 1.6rem;
+  }  
+  .skills {
+    display: block;
+    margin: 1.2rem auto;
+    text-align: center;
+    
+  }
+
+  .subtitulo {
+    font-size: 0.4rem;
+  }
+
+  .progress-circle {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    margin: 0.5rem;
+  }
+
+  .progress-circle span {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    font-size: 0.7rem;
+  }
+
+  .projects {
+    margin-top: 10px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 0 1rem;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-button {
+    padding: 5px;
+    font-size: 0.8rem;
+    margin-left: -0.4rem;
+  }
+
+  .project-button:hover {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitulo {
+    font-size: 1rem;
+  }
+  
+
+  .project-button {
+    width: 100%;
+    text-align: center;
+  }
+}
  
