@@ -128,7 +128,7 @@
     font-size: 1.6rem;
   }  
   .skills {
-    display: block;
+    display: inline-block;
     margin: 1.2rem auto;
     text-align: center;
     
