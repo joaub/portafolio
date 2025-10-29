@@ -1,9 +1,8 @@
 import { useState } from "react";
-import './App.css'
 import Typewriter from 'typewriter-effect';
 import persona from './assets/persona.jpg'
-import { FaLinkedin } from "react-icons/fa"
-import { FaGithub } from "react-icons/fa"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
+
 
 import Skills from "./Skills"
 import Proyecto from "./Proyecto"
@@ -39,96 +38,149 @@ function App() {
 
   return (
     <>
-      <div className='container'>
-        <div >
-          <nav className='inicio'>
-
-            <a href="#contacto" className='nav'>contacto</a>
-            <a href="#skills" className='nav'>skills</a>
-            <a href="#proyectos" className='nav'>proyectos</a>
+      <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-[#1e1e2f] to-[#2c2c54] text-white">
+        <div className="bg-white/15 backdrop-blur-md rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
+          {/* NAV */}
+          <nav className="my-4 flex justify-center gap-4 flex-wrap">
+            <a
+              href="#contacto"
+              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+            >
+              contacto
+            </a>
+            <a
+              href="#skills"
+              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+            >
+              skills
+            </a>
+            <a
+              href="#proyectos"
+              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+            >
+              proyectos
+            </a>
           </nav>
 
-        </div>
-        <section >
-          <article>
-            <h1 className='titulo'>Acerca de mí</h1>
-            <img src={persona} alt="" className="persona" />
-            <h2 className='nombre'>
-              <Typewriter
-                options={{
-                  strings: ['Joaquin ugarte'],
-                  autoStart: true,
-                  loop: true,
-                }}
+          {/* ACERCA DE MÍ */}
+          <section>
+            <article>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Acerca de mí</h1>
+              <img
+                src={persona}
+                alt="Foto de Joaquin"
+                className="mx-auto rounded-full w-4/12 md:w-2/5 shadow-lg"
               />
-            </h2>
-            <h2 className='nombre'><Typewriter
-              options={{
-                strings: ['Desarrollador Full Stack'],
-                autoStart: true,
-                loop: true,
-              }}
-            /></h2>
-            <p className='parrafo'>Tengo 24 años, vivo en Mendoza,Argentina. </p>
-            <p className='parrafo'>Estudie en alura latam </p>
-            <p className='parrafo'>Mi deseo es seguir expandiendo mi conocimiento y experiencia en este mundo.</p>
-          </article>
-        </section>
+              <h2 className="text-3xl mt-4 font-semibold">
+                <Typewriter
+                  options={{
+                    strings: ["Joaquin Ugarte"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h2>
+              <h2 className="text-2xl mt-2 mb-4 font-light">
+                <Typewriter
+                  options={{
+                    strings: ["Desarrollador Full Stack"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </h2>
 
+              <p className="text-lg md:text-xl">Tengo 24 años, vivo en Mendoza, Argentina.</p>
+              <p className="text-lg md:text-xl">Estudié en Alura Latam.</p>
+              <p className="text-lg md:text-xl">
+                Mi deseo es seguir expandiendo mi conocimiento y experiencia en este mundo.
+              </p>
+              <p className="text-lg md:text-xl mt-2 italic">
+                “Actualmente abierto a oportunidades como Frontend Developer. Me especializo en
+                React, Tailwind y CSS.”
+              </p>
+            </article>
+          </section>
 
-        <section className='contacto' id='contacto'>
-
-          <h2>Contacto</h2>
-          <p className="texto-contacto">
-            Si querés ponerte en contacto conmigo, completá el siguiente formulario 👇
-          </p>
-
-          {estado === "enviado" ? (
-            <p className="mensaje-exito">
-              ✅ ¡Gracias por tu mensaje! Te responderé pronto.
+          {/* CONTACTO */}
+          <section id="contacto" className="text-center py-8 px-4 mt-10">
+            <h2 className="text-3xl font-semibold mb-3">Contacto</h2>
+            <p className="text-base md:text-lg mb-4">
+              Si querés ponerte en contacto conmigo, completá el siguiente formulario 👇
             </p>
-          ) : (
-            <form onSubmit={handleSubmit} className="formulario-contacto">
-              <input
-                type="text"
-                name="name"
-                placeholder="Tu nombre"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Tu correo"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Tu mensaje"
-                rows="4"
-                required
-              ></textarea>
 
-              <button
-                type="submit"
-                disabled={estado === "enviando"}
-                className={estado === "enviando" ? "boton deshabilitado" : "boton"}
+            {estado === "enviado" ? (
+              <p className="text-green-400 font-bold mt-4">
+                ✅ ¡Gracias por tu mensaje! Te responderé pronto.
+              </p>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-3 max-w-md mx-auto"
               >
-                {estado === "enviando" ? "Enviando..." : "Enviar mensaje"}
-              </button>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Tu nombre"
+                  required
+                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Tu correo"
+                  required
+                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                />
+                <textarea
+                  name="message"
+                  placeholder="Tu mensaje"
+                  rows="4"
+                  required
+                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                ></textarea>
 
-              {estado === "error" && (
-                <p className="mensaje-error">
-                  ❌ Ocurrió un error. Intentá nuevamente.
-                </p>
-              )}
-            </form>
-          )}
-          <a className='icono' href="https://github.com/joaub" target="_blank"><FaGithub /></a>
-          <a className='icono' href="#" target="_blank"><FaLinkedin /></a>
-        </section>
+                <button
+                  type="submit"
+                  disabled={estado === "enviando"}
+                  className={`${estado === "enviando"
+                      ? "bg-gray-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-800 cursor-pointer"
+                    } text-white py-2 rounded-md font-semibold transition-colors`}
+                >
+                  {estado === "enviando" ? "Enviando..." : "Enviar mensaje"}
+                </button>
 
-        <Skills />
-        <Proyecto />
+                {estado === "error" && (
+                  <p className="text-red-400 font-bold mt-3">
+                    ❌ Ocurrió un error. Intentá nuevamente.
+                  </p>
+                )}
+              </form>
+            )}
+
+            {/* ICONOS */}
+            <div className="flex justify-center items-center gap-6 mt-6">
+              <a
+                href="https://github.com/joaub"
+                target="_blank"
+                className="text-[#11f041] text-5xl hover:scale-110 hover:outline hover:outline-[2px] hover:outline-[#20c74a] transition-all rounded-full p-1"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/joaquin-ugarte/"
+                target="_blank"
+                className="text-[#11f041] text-5xl hover:scale-110 hover:outline hover:outline-[2px] hover:outline-[#20c74a] transition-all rounded-full p-1"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+          </section>
+
+          <Skills />
+          <Proyecto />
+        </div>
       </div>
 
     </>
