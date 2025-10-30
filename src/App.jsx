@@ -10,6 +10,8 @@ import Proyecto from "./Proyecto"
 
 function App() {
   const [estado, setEstado] = useState("idle"); // "idle", "enviando", "enviado", "error"
+  const [darkMode, setDarkMode] = useState(false);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,28 +40,36 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-[#1e1e2f] to-[#2c2c54] text-white">
-        <div className="bg-white/15 backdrop-blur-md rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
+      <div className={` min-h-screen flex justify-center items-center  ${
+        darkMode ? "text-white bg-gray-900" : "bg-gray-300 text-black"
+      }`}>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
           {/* NAV */}
-          <nav className="my-4 flex justify-center gap-4 flex-wrap">
+          <nav className="my-4 flex justify-center gap-4 flex-wrap ">
             <a
               href="#contacto"
-              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+              className="text-lg px-4 py-2 hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
             >
               contacto
             </a>
             <a
               href="#skills"
-              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+              className=" text-lg px-4 py-2  hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
             >
               skills
             </a>
             <a
               href="#proyectos"
-              className="text-[#e8f8ff] text-lg px-4 py-2 hover:text-white hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
+              className=" text-lg px-4 py-2  hover:bg-[#3320dd] hover:outline hover:outline-[#f0faff] hover:outline-1 transition-all rounded-md"
             >
               proyectos
             </a>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="absolute top-4 right-4 px-3 py-1 rounded-md text-sm font-semibold bg-gray-200 hover:bg-gray-300 transition"
+            >
+              {darkMode ? "☀️ Claro" : "🌙 Oscuro"}
+            </button>
           </nav>
 
           {/* ACERCA DE MÍ */}
@@ -96,9 +106,10 @@ function App() {
                 Mi deseo es seguir expandiendo mi conocimiento y experiencia en este mundo.
               </p>
               <p className="text-lg md:text-xl mt-2 italic">
-                “Actualmente abierto a oportunidades como Frontend Developer. Me especializo en
-                React, Tailwind y CSS.”
+                “Actualmente abierto a oportunidades como Frontend Developer. 
               </p>
+              <p className="text-lg md:text-xl mt-2 italic">Me especializo en
+                React, Tailwind y CSS.”</p>
             </article>
           </section>
 
@@ -123,29 +134,29 @@ function App() {
                   name="name"
                   placeholder="Tu nombre"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-200"
+                  className="p-2 rounded-md border border-gray-400 "
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Tu correo"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-200"
+                  className="p-2 rounded-md border border-gray-400 "
                 />
                 <textarea
                   name="message"
                   placeholder="Tu mensaje"
                   rows="4"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-200"
+                  className="p-2 rounded-md border border-gray-400 "
                 ></textarea>
 
                 <button
                   type="submit"
                   disabled={estado === "enviando"}
                   className={`${estado === "enviando"
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-blue-600 hover:bg-blue-800 cursor-pointer"
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-blue-600 hover:bg-blue-800 cursor-pointer"
                     } text-white py-2 rounded-md font-semibold transition-colors`}
                 >
                   {estado === "enviando" ? "Enviando..." : "Enviar mensaje"}
