@@ -123,21 +123,21 @@ function App() {
                   name="name"
                   placeholder="Tu nombre"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                  className="p-2 rounded-md border border-gray-400 text-gray-200"
                 />
                 <input
                   type="email"
                   name="email"
                   placeholder="Tu correo"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                  className="p-2 rounded-md border border-gray-400 text-gray-200"
                 />
                 <textarea
                   name="message"
                   placeholder="Tu mensaje"
                   rows="4"
                   required
-                  className="p-2 rounded-md border border-gray-400 text-gray-800"
+                  className="p-2 rounded-md border border-gray-400 text-gray-200"
                 ></textarea>
 
                 <button

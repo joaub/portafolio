@@ -1,50 +1,41 @@
-import "./skill.css"
-
 function Skills() {
-  return (
-    <>
-     <article > 
-        <h1 className='titulo' id='skills'>Skills</h1>  
+  const skills = [
+    { name: "HTML", level: 90 },
+    { name: "CSS", level: 85 },
+    { name: "Java", level: 50 },
+    { name: "JavaScript", level: 70 },
+    { name: "MySQL", level: 45 },
+    { name: "Node JS", level: 35 },
+    { name: "Bootstrap", level: 40 },
+    { name: "React", level: 45 },
+    { name: "Tailwind", level: 60 },
+  ];
 
-        <section className="progress-circle-container ">
-          <div className="skills">
-            <p className="subtitulo">Html</p>
-            <div className="progress-circle progress-90"><span>90</span></div>  
+  return (
+    <article className="py-10 text-center" id="skills">
+      <h1 className="text-4xl font-bold mb-6 text-white">Skills</h1>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        {skills.map((skill, i) => (
+          <div
+            key={i}
+            className="p-4 bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+          >
+            <p className="text-lg font-semibold mb-2 text-blue-300">{skill.name}</p>
+
+            <div className="w-full bg-gray-700 rounded-full h-4 relative overflow-hidden">
+              <div
+                className="absolute top-0 left-0 h-4 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full transition-all duration-700"
+                style={{ width: `${skill.level}%` }}
+              ></div>
+            </div>
+
+            <p className="text-sm text-gray-300 mt-2">{skill.level}%</p>
           </div>
-          <div className="skills">
-            <p className="subtitulo">Css</p>
-            <div className="progress-circle progress-85"><span>85</span></div>  
-          </div>
-          <div className="skills">
-            <p className="subtitulo">Java</p>
-            <div className="progress-circle progress-50"><span>50</span></div>  
-          </div>
-          <div className="skills">
-            <p className="subtitulo">JavaScript</p>
-            <div className="progress-circle progress-60"><span>60</span></div>  
-          </div>
-        </section>  
-        <section className="progress-circle-container ">
-          <div className="skills">
-            <p className="subtitulo">MySql</p>
-            <div className="progress-circle progress-45"><span>45</span></div>  
-          </div>
-          <div className="skills">
-            <p className="subtitulo">Node JS</p>
-            <div className="progress-circle progress-25"><span>25</span></div>  
-          </div>
-          <div className="skills">
-            <p className="subtitulo">Bootstrap</p>
-            <div className="progress-circle progress-60"><span>60</span></div>  
-          </div> 
-          <div className="skills">
-            <p className="subtitulo">React</p>
-            <div className="progress-circle progress-30"><span>30</span></div>  
-          </div> 
-        </section>
-      </article>
-    </>
-  )
+        ))}
+      </div>
+    </article>
+  );
 }
 
-export default Skills
+export default Skills;
