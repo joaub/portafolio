@@ -13,13 +13,13 @@ const projects = [
 function Proyecto() {
     return (
         <section className="py-10 text-center" id="proyectos">
-            <h1 className="text-4xl font-bold text-white mb-6">Proyectos</h1>
+            <h1 className="text-4xl font-bold  mb-6">Proyectos</h1>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto px-4">
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl"
+                        className=" rounded-xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl"
                     >
                         <img
                             src={project.image}
@@ -27,8 +27,8 @@ function Proyecto() {
                             className="w-full h-48 object-cover"
                         />
                         <div className="p-4">
-                            <h3 className="text-xl font-semibold text-blue-300">{project.name}</h3>
-                            <p className="text-gray-300 mt-2 text-sm">{project.description}</p>
+                            <h3 className="text-xl font-semibold text-blue-500">{project.name}</h3>
+                            <p className=" mt-2 text-sm">{project.description}</p>
                             <a
                                 href={project.link}
                                 target="_blank"

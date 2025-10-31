@@ -43,7 +43,7 @@ function App() {
       <div className={` min-h-screen flex justify-center items-center  ${
         darkMode ? "text-white bg-gray-900" : "bg-gray-300 text-black"
       }`}>
-        <div className="bg-white/10 backdrop-blur-md rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
+        <div className="rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
           {/* NAV */}
           <nav className="my-4 flex justify-center gap-4 flex-wrap ">
             <a
@@ -66,7 +66,7 @@ function App() {
             </a>
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="absolute top-4 right-4 px-3 py-1 rounded-md text-sm font-semibold bg-gray-200 hover:bg-gray-300 transition"
+              className={`absolute top-4 right-4 px-3 py-1 rounded-md text-sm font-semibold bg-gray-200 hover:bg-gray-300 transition ${darkMode ? "bg-gray-700 text-white " : "bg-gray-400 text-black "}`}
             >
               {darkMode ? "☀️ Claro" : "🌙 Oscuro"}
             </button>

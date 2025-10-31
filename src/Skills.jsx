@@ -13,15 +13,15 @@ function Skills() {
 
   return (
     <article className="py-10 text-center" id="skills">
-      <h1 className="text-4xl font-bold mb-6 text-white">Skills</h1>
+      <h1 className="text-4xl font-bold mb-6 ">Skills</h1>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
         {skills.map((skill, i) => (
           <div
             key={i}
-            className="p-4 bg-white/10 backdrop-blur-md rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+            className="p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
           >
-            <p className="text-lg font-semibold mb-2 text-blue-300">{skill.name}</p>
+            <p className="text-lg font-semibold mb-2 text-sky-700">{skill.name}</p>
 
             <div className="w-full bg-gray-700 rounded-full h-4 relative overflow-hidden">
               <div
@@ -30,7 +30,7 @@ function Skills() {
               ></div>
             </div>
 
-            <p className="text-sm text-gray-300 mt-2">{skill.level}%</p>
+            <p className="text-sm  mt-2">{skill.level}%</p>
           </div>
         ))}
       </div>
