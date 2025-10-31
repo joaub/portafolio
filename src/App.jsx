@@ -43,7 +43,9 @@ function App() {
       <div className={` min-h-screen flex justify-center items-center  ${
         darkMode ? "text-white bg-gray-900" : "bg-gray-300 text-black"
       }`}>
-        <div className="rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3">
+        <div className={` rounded-xl p-5 md:p-8 max-w-[1000px] text-center shadow-[0_4px_10px_rgba(0,0,0,0.2)] w-full m-3 ${
+        darkMode ? "text-white bg-gray-800" : "bg-gray-200 text-black"
+      }`}>
           {/* NAV */}
           <nav className="my-4 flex justify-center gap-4 flex-wrap ">
             <a
