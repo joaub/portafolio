@@ -1,9 +1,12 @@
 import timerJs from "./assets/Timerjs.png";
+import cicloSexagenario from "./assets/ciclo-sexagenario.png"; 
 import piano2 from "./assets/piano2.png";
 import juegoDelAhorcado from "./assets/juego-del-ahorcado.png";
 import pokeApi from "./assets/pokeapi.png";
 
+
 const projects = [
+    {name:"ciclo-sexagenario", link:"https://joaub.github.io/ciclo-sexagenario/", description:"Calculadora del ciclo sexagenario chino.", image: cicloSexagenario},
     { name: "Juego del Ahorcado", link: "https://joaub.github.io/ahorcado-juego/", description: "Juego interactivo con JavaScript.", image: juegoDelAhorcado },
     { name: "TimerJS", link: "https://joaub.github.io/timerJS/", description: "Temporizador hecho en JavaScript.", image: timerJs },
     { name: "Piano", link: "https://joaub.github.io/pianoJs/", description: "Piano virtual con JavaScript.", image: piano2 },
