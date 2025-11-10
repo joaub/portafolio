@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import Typewriter from 'typewriter-effect';
 import persona from './assets/persona.jpg'
 import { FaLinkedin, FaGithub } from "react-icons/fa"
-
-
 import Skills from "./Skills"
 import Proyecto from "./Proyecto"
+
+function useDarkMode(defaultValue = false) {
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem("darkMode");
+    return saved ? JSON.parse(saved) : defaultValue;
+  });
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    document.documentElement.classList.toggle("dark", darkMode);
+  }, [darkMode]);
+  return [darkMode, setDarkMode];
+}
 
 
 function App() {
   const [estado, setEstado] = useState("idle"); // "idle", "enviando", "enviado", "error"
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkMode(false);
 
 
   const handleSubmit = async (e) => {
