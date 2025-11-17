@@ -6,7 +6,7 @@ import pokeApi from "./assets/pokeapi.png";
 
 
 const projects = [
-    {name:"ciclo-sexagenario", link:"https://joaub.github.io/ciclo-sexagenario/", description:"Calculadora del ciclo sexagenario chino.", image: cicloSexagenario},
+    {name:"ciclo-sexagenario", link:"https://calendario-chino.vercel.app/", description:"Calculadora del ciclo sexagenario chino.", image: cicloSexagenario},
     { name: "Juego del Ahorcado", link: "https://juego-del-ahorcado-v2.vercel.app/", description: "Juego interactivo con JavaScript.", image: juegoDelAhorcado },
     { name: "TimerJS", link: "https://joaub.github.io/timerJS/", description: "Temporizador hecho en JavaScript.", image: timerJs },
     { name: "Piano", link: "https://joaub.github.io/pianoJs/", description: "Piano virtual con JavaScript.", image: piano2 },
