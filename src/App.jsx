@@ -113,15 +113,14 @@ function App() {
               </h2>
 
               <p className="text-lg md:text-xl">Tengo 24 años, vivo en Mendoza, Argentina.</p>
-              <p className="text-lg md:text-xl">Estudié en Alura Latam.</p>
+              
               <p className="text-lg md:text-xl">
-                Mi deseo es seguir expandiendo mi conocimiento y experiencia en este mundo.
+                Mi deseo es seguir expandiendo mi conocimiento y experiencia.
               </p>
               <p className="text-lg md:text-xl mt-2 italic">
-                “Actualmente abierto a oportunidades como Frontend Developer. 
+                “Actualmente abierto a oportunidades como Frontend Developer. ”
               </p>
-              <p className="text-lg md:text-xl mt-2 italic">Me especializo en
-                React, Tailwind y CSS.”</p>
+              
             </article>
           </section>
 
