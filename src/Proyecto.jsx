@@ -6,12 +6,13 @@ import pokeApi from "./assets/pokeapi.png";
 
 
 const projects = [
-    {name:"ciclo-sexagenario", link:"https://calendario-chino.vercel.app/", description:"Calculadora del ciclo sexagenario chino.",tecnologias:"HTML,Vite,TAILWIND, REACT, JavaScript" ,image: cicloSexagenario},
-    { name: "Juego del Ahorcado", link: "https://juego-del-ahorcado-v2.vercel.app/", description: "Juego interactivo con JavaScript.",tecnologias:"HTML,Vite,TAILWIND, REACT, JavaScript" , image: juegoDelAhorcado },
-    { name: "TimerJS", link: "https://joaub.github.io/timerJS/", description: "Temporizador hecho en JavaScript.",tecnologias:"HTML,CSS, JavaScript" , image: timerJs },
-    { name: "Piano", link: "https://joaub.github.io/pianoJs/", description: "Piano virtual con JavaScript.",tecnologias:"HTML,CSS, JavaScript" , image: piano2 },
-    { name: "PokeAPI", link: "https://joaub.github.io/pokeapi/", description: "Pokedex con React.",tecnologias:"HTML,Vite,TAILWIND, REACT, JavaScript" , image: pokeApi },
+    {name:"ciclo-sexagenario", link:"https://calendario-chino.vercel.app/", description:"Calculadora del ciclo sexagenario chino.",tecnologias:["HTML","Tailwind", "React", "JavaScript" ],image: cicloSexagenario},
+    { name: "Juego del Ahorcado", link: "https://juego-del-ahorcado-v2.vercel.app/", description: "Juego interactivo con JavaScript.",tecnologias:["HTML","Tailwind", "React", "JavaScript" ] , image: juegoDelAhorcado },
+    { name: "TimerJS", link: "https://joaub.github.io/timerJS/", description: "Temporizador hecho en JavaScript.",tecnologias:["HTML","CSS", "JavaScript" ] , image: timerJs },
+    { name: "Piano", link: "https://joaub.github.io/pianoJs/", description: "Piano virtual con JavaScript.",tecnologias:["HTML","CSS", "JavaScript" ] , image: piano2 },
+    { name: "PokeAPI", link: "https://joaub.github.io/pokeapi/", description: "Pokedex con React.",tecnologias:["HTML","Tailwind", "React", "JavaScript" ] , image: pokeApi },
 ];
+
 
 function Proyecto() {
     return (
@@ -32,7 +33,10 @@ function Proyecto() {
                         <div className="p-4">
                             <h3 className="text-xl font-semibold text-blue-500">{project.name}</h3>
                             <p className=" mt-2 text-sm">{project.description}</p>
-                            <p className=" mt-2 text-sm">{project.tecnologias}</p>
+                            <p className=" mt-2 text-sm ">{project.tecnologias.map((tecnologia, index) => (
+                                <span key={index} className="border border-blue-500 rounded-lg p-2 inline-block">{tecnologia}{index < project.tecnologias.length - 1 ? ',' : ''}</span>
+                            ))}</p>
+                            
                             <a
                                 href={project.link}
                                 target="_blank"
