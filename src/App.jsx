@@ -105,14 +105,14 @@ function App() {
               <h2 className="text-2xl mt-2 mb-4 font-light">
                 <Typewriter
                   options={{
-                    strings: ["Desarrollador Full Stack"],
+                    strings: ["Desarrollador Front End "],
                     autoStart: true,
                     loop: true,
                   }}
                 />
               </h2>
 
-              <p className="text-lg md:text-xl">Tengo 24 años, vivo en Mendoza, Argentina.</p>
+              <p className="text-lg md:text-xl">vivo en Mendoza, Argentina.</p>
               
               <p className="text-lg md:text-xl">
                 Mi deseo es seguir expandiendo mi conocimiento y experiencia.
