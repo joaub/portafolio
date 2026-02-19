@@ -3,6 +3,7 @@ import {
   MySQL, Nodejs, Bootstrap, React, TailwindCSS
 } from "./svg/svg";
 
+
 function Skills() {
   const skills = [
     { name: "HTML", icon: HTML5 },
@@ -24,7 +25,7 @@ function Skills() {
         {skills.map((skill, i) => (
           <div
             key={i}
-            className="p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
+            className="p-4 rounded-xl shadow-lg border border-blue-700 hover:scale-105 transition-transform duration-300 "
           >
             <p className="text-lg font-semibold mb-2 text-sky-700">{skill.name}</p>
 

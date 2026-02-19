@@ -33,8 +33,11 @@ function Proyecto() {
                         <div className="p-4">
                             <h3 className="text-xl font-semibold text-blue-500">{project.name}</h3>
                             <p className=" mt-2 text-sm">{project.description}</p>
-                            <p className=" mt-2 text-sm ">{project.tecnologias.map((tecnologia, index) => (
-                                <span key={index} className="border border-blue-500 rounded-lg p-2 inline-block text-green-600">{tecnologia}{index = ''}</span>
+                            <p className=" mt-2 text-sm ">
+                            {project.tecnologias.map((tecnologia) => (
+                                <span key={tecnologia} 
+                                className="border border-blue-500 rounded-lg p-2 inline-block text-green-600">
+                                    {tecnologia}</span>
                             ))}</p>
                             
                             <a
